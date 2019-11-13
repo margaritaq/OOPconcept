@@ -1,12 +1,12 @@
-public class JsonMessage implements MEssage {
+public class JsonMessage implements MessageType {
     private String name = "Json";
-    private String body;
+    private String jsonBody;
 
     public JsonMessage() {
     }
 
     public JsonMessage(String body) {
-        this.body = body;
+        this.jsonBody = body;
     }
 
     public String getName() {
@@ -31,12 +31,13 @@ public class JsonMessage implements MEssage {
         this.name = name;
     }
 
+    @Override
     public String getBody() {
-        return body;
+        return this.jsonBody;
     }
 
     public void setBody(String body) {
-        this.body = body;
+        this.jsonBody = body;
     }
 }
 

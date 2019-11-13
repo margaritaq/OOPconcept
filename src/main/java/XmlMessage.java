@@ -1,12 +1,12 @@
-public class XmlMessage implements MEssage {
+public class XmlMessage implements MessageType {
     private String name = "XML";
-    private String body;
+    private String xmlBody;
 
     public XmlMessage() {
     }
 
     public XmlMessage(String body) {
-        this.body = body;
+        this.xmlBody = body;
     }
 
     public String getName() {
@@ -31,11 +31,12 @@ public class XmlMessage implements MEssage {
         this.name = name;
     }
 
+    @Override
     public String getBody() {
-        return body;
+        return this.xmlBody;
     }
 
     public void setBody(String body) {
-        this.body = body;
+        this.xmlBody = body;
     }
 }

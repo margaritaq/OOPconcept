@@ -1,8 +1,6 @@
 public class MessageProcessor {
-    public void printXml(XmlMessage a){
-        System.out.println(a.getName()+"body: "+ a.getBody());
+    public void printMessage(MessageType message) {
+        System.out.println(message.getName() + "body: " + message.getBody());
     }
-    public void printJson(JsonMessage a){
-        System.out.println(a.getName()+"body: "+ a.getBody());
-    }
+
 }

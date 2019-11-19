@@ -1,9 +1,6 @@
-public class XmlMessage implements MEssage {
-    private String name = "XML";
+public class XmlMessage implements MessageType {
+    private static final String name = "XML";
     private String body;
-
-    public XmlMessage() {
-    }
 
     public XmlMessage(String body) {
         this.body = body;
@@ -18,17 +15,8 @@ public class XmlMessage implements MEssage {
         System.out.println("NO message");
     }
 
-    public void prepareMessage(String a) {
-        System.out.println(a);
-    }
-
-    public void prepareMessage(String a, String b) {
-        System.out.println(a + " " + b);
-
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void prepareMessage(String body) {
+        System.out.println(body);
     }
 
     public String getBody() {

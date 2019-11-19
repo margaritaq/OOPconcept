@@ -1,9 +1,6 @@
-public class JsonMessage implements MEssage {
-    private String name = "Json";
+public class JsonMessage implements MessageType {
+    private static final String name = "Json";
     private String body;
-
-    public JsonMessage() {
-    }
 
     public JsonMessage(String body) {
         this.body = body;
@@ -18,17 +15,8 @@ public class JsonMessage implements MEssage {
         System.out.println("NO message");
     }
 
-    public void prepareMessage(String a) {
-        System.out.println(a);
-    }
-
-    public void prepareMessage(String a, String b) {
-        System.out.println(a + " " + b);
-
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void prepareMessage(String body) {
+        System.out.println(body);
     }
 
     public String getBody() {
